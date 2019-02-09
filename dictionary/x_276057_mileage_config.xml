@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Config" max_length="40" name="x_276057_mileage_config" type="collection">
+        <element label="API Key" max_length="100" name="api_key" type="string"/>
+        <element label="Default" max_length="100" name="default" type="boolean"/>
+        <element label="Default Origin" max_length="32" name="default_origin" reference="cmn_location" type="reference"/>
+        <element label="Name" max_length="100" name="name" type="string"/>
+        <element label="REST Message" max_length="32" name="rest_message" reference="sys_rest_message" reference_qual="sys_scope=0922d62edb13230067fbe1bb4b9619f1^EQ" reference_qual_condition="sys_scope=0922d62edb13230067fbe1bb4b9619f1^EQ" type="reference"/>
+        <element choice="3" default="metric" label="Units" max_length="100" name="units" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Metric" sequence="1" value="metric"/>
+                <element inactive_on_update="false" label="Imperial" sequence="2" value="imperial"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="default_origin"/>
+        </index>
+        <index name="index2">
+            <element name="rest_message"/>
+        </index>
+    </element>
+</database>

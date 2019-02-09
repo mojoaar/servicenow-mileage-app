@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_app">
+    <sys_app action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <enforce_license>log</enforce_license>
+        <js_level>helsinki_es5</js_level>
+        <licensable>true</licensable>
+        <license_category>none</license_category>
+        <license_model>none</license_model>
+        <logo/>
+        <menu display_value="Mileage">9d225a6edb13230067fbe1bb4b961996</menu>
+        <name>Mileage</name>
+        <private>false</private>
+        <restrict_table_access>false</restrict_table_access>
+        <runtime_access_tracking>permissive</runtime_access_tracking>
+        <scope>x_276057_mileage</scope>
+        <scoped_administration>false</scoped_administration>
+        <short_description/>
+        <source>x_276057_mileage</source>
+        <store_correlation_id/>
+        <store_url/>
+        <sys_class_name>sys_app</sys_class_name>
+        <sys_code/>
+        <sys_created_by>devo.mj</sys_created_by>
+        <sys_created_on>2019-02-01 13:03:32</sys_created_on>
+        <sys_id>0922d62edb13230067fbe1bb4b9619f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>devo.mj</sys_updated_by>
+        <sys_updated_on>2019-02-01 13:03:32</sys_updated_on>
+        <template/>
+        <trackable>true</trackable>
+        <user_role display_value="x_276057_mileage.user" name="x_276057_mileage.user">1d225a6edb13230067fbe1bb4b961999</user_role>
+        <vendor/>
+        <vendor_prefix/>
+        <version>1.0.0</version>
+    </sys_app>
+</record_update>

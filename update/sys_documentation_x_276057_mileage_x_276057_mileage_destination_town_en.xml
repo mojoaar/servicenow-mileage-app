@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="destination_town" label="Destination Town" language="en" table="x_276057_mileage_x_276057_mileage">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>destination_town</element>
+            <help/>
+            <hint/>
+            <label>Destination Town</label>
+            <language>en</language>
+            <name>x_276057_mileage_x_276057_mileage</name>
+            <plural>Destination Towns</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>devo.mj</sys_created_by>
+            <sys_created_on>2019-02-05 08:37:18</sys_created_on>
+            <sys_id>549bb9f7db53230067fbe1bb4b961956</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Destination Town</sys_name>
+            <sys_package display_value="Mileage" source="x_276057_mileage">0922d62edb13230067fbe1bb4b9619f1</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Mileage">0922d62edb13230067fbe1bb4b9619f1</sys_scope>
+            <sys_update_name>sys_documentation_x_276057_mileage_x_276057_mileage_destination_town_en</sys_update_name>
+            <sys_updated_by>devo.mj</sys_updated_by>
+            <sys_updated_on>2019-02-05 08:37:18</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

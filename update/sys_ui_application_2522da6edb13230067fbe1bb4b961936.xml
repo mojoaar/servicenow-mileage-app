@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_application">
+    <sys_ui_application action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <hint/>
+        <name>Mileage</name>
+        <order/>
+        <roles>x_276057_mileage.user</roles>
+        <sys_class_name>sys_ui_application</sys_class_name>
+        <sys_created_by>devo.mj</sys_created_by>
+        <sys_created_on>2019-02-01 13:03:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2522da6edb13230067fbe1bb4b961936</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Mileage</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Mileage" source="x_276057_mileage">0922d62edb13230067fbe1bb4b9619f1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mileage">0922d62edb13230067fbe1bb4b9619f1</sys_scope>
+        <sys_update_name>sys_ui_application_2522da6edb13230067fbe1bb4b961936</sys_update_name>
+        <sys_updated_by>devo.mj</sys_updated_by>
+        <sys_updated_on>2019-02-01 13:03:33</sys_updated_on>
+    </sys_ui_application>
+</record_update>

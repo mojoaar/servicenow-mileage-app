@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>devo.mj</sys_created_by>
+        <sys_created_on>2019-02-01 13:03:32</sys_created_on>
+        <sys_id>1d22da6edb13230067fbe1bb4b961918</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_276057_mileage_x_276057_mileage.x_276057_mileage.user</sys_name>
+        <sys_package display_value="Mileage" source="x_276057_mileage">0922d62edb13230067fbe1bb4b9619f1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mileage">0922d62edb13230067fbe1bb4b9619f1</sys_scope>
+        <sys_security_acl display_value="x_276057_mileage_x_276057_mileage">1922da6edb13230067fbe1bb4b961916</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_1d22da6edb13230067fbe1bb4b961918</sys_update_name>
+        <sys_updated_by>devo.mj</sys_updated_by>
+        <sys_updated_on>2019-02-01 13:03:32</sys_updated_on>
+        <sys_user_role display_value="x_276057_mileage.user" name="x_276057_mileage.user">1d225a6edb13230067fbe1bb4b961999</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

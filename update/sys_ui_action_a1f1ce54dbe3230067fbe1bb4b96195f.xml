@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name/>
+        <active>true</active>
+        <client>true</client>
+        <client_script_v2/>
+        <comments/>
+        <condition>gs.hasRole("itil")</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <hint>Will contact Google Maps API and calculate distance</hint>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>Calculate Distance</name>
+        <onclick>setDistance()</onclick>
+        <order>10</order>
+        <script><![CDATA[function setDistance() {
+	var avoidFerries = g_form.getValue('avoid_ferries');
+	console.log('var avoidFerries: ' + avoidFerries);
+	
+	// build origin for api call
+	var origin_street_address = g_form.getValue('origin_street_address');
+	var origin_street_address = origin_street_address.replace(/ /g, "+");
+	var origin_town = g_form.getValue('origin_town');
+	var origin_town = origin_town.replace(/ /g, "+")
+	var origin_postcode = g_form.getValue('origin_postcode');
+	var origin_country = g_form.getValue('origin_country');
+	var origin_country = origin_country.replace(/ /g, "+");
+	if (origin_street_address && origin_town && origin_postcode && origin_country) {
+		var buildOrigin = origin_street_address + ',' + origin_postcode + ',' + origin_town + ',' + origin_country
+		console.log('var buildOrigin: ' + buildOrigin);
+	} else if (origin_street_address && origin_town && origin_country) {
+		var buildOrigin = origin_street_address + ',' + origin_town + ',' + origin_country
+		console.log('var buildOrigin: ' + buildOrigin);
+	} else if (origin_street_address && origin_postcode && origin_country) {
+		var buildOrigin = origin_street_address + ',' + origin_postcode + ',' + origin_country
+		console.log('var buildOrigin: ' + buildOrigin);
+	} else {
+		console.log('var buildOrigin error');
+	}
+	
+	// build destination for api call
+	var destination_street_address = g_form.getValue('destination_street_address');
+	var destination_street_address = destination_street_address.replace(/ /g, "+");
+	var destination_town = g_form.getValue('destination_town');
+	var destination_town = destination_town.replace(/ /g, "+");
+	var destination_postcode = g_form.getValue('destination_postcode');
+	var destination_country = g_form.getValue('destination_country');
+	var destination_country = destination_country.replace(/ /g, "+");
+	if (destination_street_address && destination_town && destination_postcode && destination_country) {
+		var buildDestination = destination_street_address + ',' + destination_postcode + ',' + destination_town + ',' + destination_country
+		console.log('var buildDestination: ' + buildDestination);
+	} else if (destination_street_address && destination_town && destination_country) {
+		var buildDestination = destination_street_address + ',' + destination_town + ',' + destination_country
+		console.log('var buildDestination: ' + buildDestination);
+	} else if (destination_street_address && destination_postcode && destination_country) {
+		var buildDestination = destination_street_address + ',' + destination_postcode + ',' + destination_country
+		console.log('var buildDestination: ' + buildDestination);
+	} else {
+		console.log('var buildDestination error');
+	}
+
+	// get units & api key from scratchpad
+	var units = g_scratchpad.units;
+	var apikey = g_scratchpad.api_key;
+
+	// get the distance
+	var gAjax = new GlideAjax('helperFunctions');
+	gAjax.addParam('sysparm_name','setDistance');
+	gAjax.addParam('sysparm_units', units);
+	gAjax.addParam('sysparm_origin', buildOrigin);
+	gAjax.addParam('sysparm_destination', buildDestination);
+	gAjax.addParam('sysparm_googleapikey', apikey);
+	if (avoidFerries === 'true') {
+		gAjax.addParam('sysparm_avoidferries', 'ferries');
+		console.log('using var avoidFerries parameter');
+	}
+	gAjax.getXMLAnswer(logDistance);
+
+	// callback function to handle results
+	function logDistance(response) {
+		console.log('calculated distance: ' + response);
+		g_form.setValue('distance',response);
+	}
+}]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>devo.mj</sys_created_by>
+        <sys_created_on>2019-02-06 22:22:47</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a1f1ce54dbe3230067fbe1bb4b96195f</sys_id>
+        <sys_mod_count>62</sys_mod_count>
+        <sys_name>Calculate Distance</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Mileage" source="x_276057_mileage">0922d62edb13230067fbe1bb4b9619f1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mileage">0922d62edb13230067fbe1bb4b9619f1</sys_scope>
+        <sys_update_name>sys_ui_action_a1f1ce54dbe3230067fbe1bb4b96195f</sys_update_name>
+        <sys_updated_by>devo.mj</sys_updated_by>
+        <sys_updated_on>2019-02-09 08:28:34</sys_updated_on>
+        <table>x_276057_mileage_x_276057_mileage</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

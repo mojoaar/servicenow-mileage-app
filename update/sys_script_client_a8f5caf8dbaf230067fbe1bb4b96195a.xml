@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>default_origin</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>useDefaultOrigin</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+	var defaultOrigin = g_form.getValue('default_origin');
+   console.log('var defaultOrigin: ' + defaultOrigin);
+   
+	if (defaultOrigin === 'true') {
+      var configUsed = g_form.getValue('config_used');
+      var gAjax = new GlideAjax('helperFunctions');
+      gAjax.addParam('sysparm_name','getDefaultOrigin');
+      gAjax.addParam('sysparm_config_used', configUsed);
+      gAjax.getXMLAnswer(logConfigUsed);
+
+      function logConfigUsed(response) {
+         console.log(response);
+         var allResonses = response.split(';');
+         //var locationName = allResonses[0];
+         var streetAddress = allResonses[1];
+         g_form.setValue('origin_street_address',streetAddress);
+         var townName = allResonses[2];
+         g_form.setValue('origin_town',townName);
+         var postcode = allResonses[3];
+         g_form.setValue('origin_postcode',postcode);
+         var country = allResonses[4];
+         g_form.setValue('origin_country',country);
+      }
+		console.log('using var defaultOrigin (true) parameter');
+	} else if (defaultOrigin === 'false') {
+      console.log('using var defaultOrigin (false) parameter');
+      g_form.setValue('origin_street_address','');
+      g_form.setValue('origin_town','');
+      g_form.setValue('origin_postcode','');
+      g_form.setValue('origin_country','');
+   }
+   
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>devo.mj</sys_created_by>
+        <sys_created_on>2019-02-08 11:57:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a8f5caf8dbaf230067fbe1bb4b96195a</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>useDefaultOrigin</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Mileage" source="x_276057_mileage">0922d62edb13230067fbe1bb4b9619f1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mileage">0922d62edb13230067fbe1bb4b9619f1</sys_scope>
+        <sys_update_name>sys_script_client_a8f5caf8dbaf230067fbe1bb4b96195a</sys_update_name>
+        <sys_updated_by>devo.mj</sys_updated_by>
+        <sys_updated_on>2019-02-08 15:32:09</sys_updated_on>
+        <table>x_276057_mileage_x_276057_mileage</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

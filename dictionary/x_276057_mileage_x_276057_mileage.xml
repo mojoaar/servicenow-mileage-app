@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" label="Mileage" max_length="40" name="x_276057_mileage_x_276057_mileage" type="collection">
+        <element default="true" label="Avoid Ferries" max_length="100" name="avoid_ferries" type="boolean"/>
+        <element default="Google Maps API" label="Config Used" max_length="32" name="config_used" reference="x_276057_mileage_config" type="reference"/>
+        <element label="Default Origin" max_length="40" name="default_origin" type="boolean"/>
+        <element label="Destination Country" max_length="100" name="destination_country" type="string"/>
+        <element label="Destination Postcode" max_length="100" name="destination_postcode" type="string"/>
+        <element label="Destination Street Address" max_length="100" name="destination_street_address" type="string"/>
+        <element label="Destination Town" max_length="100" name="destination_town" type="string"/>
+        <element label="Distance" max_length="100" name="distance" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Origin Country" max_length="100" name="origin_country" type="string"/>
+        <element label="Origin Postcode" max_length="100" name="origin_postcode" type="string"/>
+        <element label="Origin Street Address" max_length="100" name="origin_street_address" type="string"/>
+        <element label="Origin Town" max_length="100" name="origin_town" type="string"/>
+        <element default="javascript:gs.getUserID();" dynamic_default_value="bdcb83a85f220100a9ad2572f2b4773d" label="User" max_length="32" name="user" reference="sys_user" type="reference" use_dynamic_default="true"/>
+        <index name="index">
+            <element name="config_used"/>
+        </index>
+        <index name="index2">
+            <element name="user"/>
+        </index>
+    </element>
+</database>

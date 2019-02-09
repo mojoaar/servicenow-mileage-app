@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="4c779e62db53230067fbe1bb4b96199f" sys_domain="global" table="x_276057_mileage_config" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>name</element>
+            <position>0</position>
+            <sys_created_by>devo.mj</sys_created_by>
+            <sys_created_on>2019-02-08 10:08:01</sys_created_on>
+            <sys_id>e61de9f8db6f230067fbe1bb4b9619d6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_276057_mileage_config" sys_domain="global" view="Default view">4c779e62db53230067fbe1bb4b96199f</sys_ui_section>
+            <sys_updated_by>devo.mj</sys_updated_by>
+            <sys_updated_on>2019-02-08 10:08:01</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>rest_message</element>
+            <position>1</position>
+            <sys_created_by>devo.mj</sys_created_by>
+            <sys_created_on>2019-02-08 10:08:01</sys_created_on>
+            <sys_id>6a1de9f8db6f230067fbe1bb4b9619d6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_276057_mileage_config" sys_domain="global" view="Default view">4c779e62db53230067fbe1bb4b96199f</sys_ui_section>
+            <sys_updated_by>devo.mj</sys_updated_by>
+            <sys_updated_on>2019-02-08 10:08:01</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>api_endpoint</element>
+            <position>2</position>
+            <sys_created_by>devo.mj</sys_created_by>
+            <sys_created_on>2019-02-08 10:08:01</sys_created_on>
+            <sys_id>ea1de9f8db6f230067fbe1bb4b9619d6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_276057_mileage_config" sys_domain="global" view="Default view">4c779e62db53230067fbe1bb4b96199f</sys_ui_section>
+            <sys_updated_by>devo.mj</sys_updated_by>
+            <sys_updated_on>2019-02-08 10:08:01</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>api_key</element>
+            <position>3</position>
+            <sys_created_by>devo.mj</sys_created_by>
+            <sys_created_on>2019-02-08 10:08:01</sys_created_on>
+            <sys_id>6e1de9f8db6f230067fbe1bb4b9619d6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_276057_mileage_config" sys_domain="global" view="Default view">4c779e62db53230067fbe1bb4b96199f</sys_ui_section>
+            <sys_updated_by>devo.mj</sys_updated_by>
+            <sys_updated_on>2019-02-08 10:08:01</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>default</element>
+            <position>4</position>
+            <sys_created_by>devo.mj</sys_created_by>
+            <sys_created_on>2019-02-08 10:08:01</sys_created_on>
+            <sys_id>ee1de9f8db6f230067fbe1bb4b9619d6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_276057_mileage_config" sys_domain="global" view="Default view">4c779e62db53230067fbe1bb4b96199f</sys_ui_section>
+            <sys_updated_by>devo.mj</sys_updated_by>
+            <sys_updated_on>2019-02-08 10:08:01</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>units</element>
+            <position>5</position>
+            <sys_created_by>devo.mj</sys_created_by>
+            <sys_created_on>2019-02-08 10:08:01</sys_created_on>
+            <sys_id>621de9f8db6f230067fbe1bb4b9619d7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_276057_mileage_config" sys_domain="global" view="Default view">4c779e62db53230067fbe1bb4b96199f</sys_ui_section>
+            <sys_updated_by>devo.mj</sys_updated_by>
+            <sys_updated_on>2019-02-08 10:08:01</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>default_country</element>
+            <position>6</position>
+            <sys_created_by>devo.mj</sys_created_by>
+            <sys_created_on>2019-02-08 10:08:01</sys_created_on>
+            <sys_id>e21de9f8db6f230067fbe1bb4b9619d7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_276057_mileage_config" sys_domain="global" view="Default view">4c779e62db53230067fbe1bb4b96199f</sys_ui_section>
+            <sys_updated_by>devo.mj</sys_updated_by>
+            <sys_updated_on>2019-02-08 10:08:01</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>default_origin</element>
+            <position>7</position>
+            <sys_created_by>devo.mj</sys_created_by>
+            <sys_created_on>2019-02-08 11:44:27</sys_created_on>
+            <sys_id>4b234a78dbaf230067fbe1bb4b9619a2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_276057_mileage_config" sys_domain="global" view="Default view">4c779e62db53230067fbe1bb4b96199f</sys_ui_section>
+            <sys_updated_by>devo.mj</sys_updated_by>
+            <sys_updated_on>2019-02-08 11:44:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_276057_mileage_config</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>devo.mj</sys_created_by>
+            <sys_created_on>2019-02-01 13:26:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4c779e62db53230067fbe1bb4b96199f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_276057_mileage_config</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Mileage" source="x_276057_mileage">0922d62edb13230067fbe1bb4b9619f1</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Mileage">0922d62edb13230067fbe1bb4b9619f1</sys_scope>
+            <sys_update_name>sys_ui_section_4c779e62db53230067fbe1bb4b96199f</sys_update_name>
+            <sys_updated_by>devo.mj</sys_updated_by>
+            <sys_updated_on>2019-02-01 13:26:39</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

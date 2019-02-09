@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>distance</field>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>devo.mj</sys_created_by>
+        <sys_created_on>2019-02-08 16:00:20</sys_created_on>
+        <sys_id>a9bdb27cdb23630067fbe1bb4b96191a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>distance</sys_name>
+        <sys_package display_value="Mileage" source="x_276057_mileage">0922d62edb13230067fbe1bb4b9619f1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Mileage">0922d62edb13230067fbe1bb4b9619f1</sys_scope>
+        <sys_update_name>sys_ui_policy_action_a9bdb27cdb23630067fbe1bb4b96191a</sys_update_name>
+        <sys_updated_by>devo.mj</sys_updated_by>
+        <sys_updated_on>2019-02-08 16:00:20</sys_updated_on>
+        <table>x_276057_mileage_x_276057_mileage</table>
+        <ui_policy display_value="distanceMandatory">9e9d327cdb23630067fbe1bb4b961962</ui_policy>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+</record_update>

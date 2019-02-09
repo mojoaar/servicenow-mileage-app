@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="units" table="x_276057_mileage_config" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>units</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Metric</label>
+            <language>en</language>
+            <name>x_276057_mileage_config</name>
+            <sequence>1</sequence>
+            <sys_created_by>devo.mj</sys_created_by>
+            <sys_created_on>2019-02-05 07:51:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b3f0b133db53230067fbe1bb4b961977</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>devo.mj</sys_updated_by>
+            <sys_updated_on>2019-02-05 07:51:48</sys_updated_on>
+            <value>metric</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>units</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Imperial</label>
+            <language>en</language>
+            <name>x_276057_mileage_config</name>
+            <sequence>2</sequence>
+            <sys_created_by>devo.mj</sys_created_by>
+            <sys_created_on>2019-02-05 07:51:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1611b133db53230067fbe1bb4b96197c</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>devo.mj</sys_updated_by>
+            <sys_updated_on>2019-02-05 07:52:07</sys_updated_on>
+            <value>imperial</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>units</element>
+            <name>x_276057_mileage_config</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>devo.mj</sys_created_by>
+            <sys_created_on>2019-02-05 07:51:34</sys_created_on>
+            <sys_id>1a11b133db53230067fbe1bb4b96198d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>units</sys_name>
+            <sys_package display_value="Mileage" source="x_276057_mileage">0922d62edb13230067fbe1bb4b9619f1</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Mileage">0922d62edb13230067fbe1bb4b9619f1</sys_scope>
+            <sys_update_name>sys_choice_x_276057_mileage_config_units</sys_update_name>
+            <sys_updated_by>devo.mj</sys_updated_by>
+            <sys_updated_on>2019-02-05 07:51:34</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

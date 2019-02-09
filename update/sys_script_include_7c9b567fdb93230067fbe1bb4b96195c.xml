@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_276057_mileage.helperFunctions</api_name>
+        <client_callable>true</client_callable>
+        <description>Used to perform various tasks</description>
+        <name>helperFunctions</name>
+        <script><![CDATA[var helperFunctions = Class.create();
+helperFunctions.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	
+	getAPIKey: function(recordID) {
+    var configTable = this.getConfigTable();
+    try {
+        if (recordID === undefined) {
+            var getApiKey = new GlideRecord(configTable);
+            getApiKey.addQuery('default',true);
+            getApiKey.query();
+            if(getApiKey.next()){
+                var apiKey = getApiKey.api_key;
+                return apiKey;
+            } else {
+                return false;
+            }
+        } else {
+            var getApiKey = new GlideRecord(configTable);
+            getApiKey.addQuery('sys_id',recordID);
+            getApiKey.query();
+            if(getApiKey.next()){
+                var apiKey = getApiKey.api_key;
+                return apiKey;
+            } else {
+                return false;
+            }
+        }
+    } catch (ex) {
+        var message = ex.getMessage();
+        gs.debug(message);
+    }	
+},
+	getCompanyCode: function() {
+		var companyCode = gs.getProperty('glide.appcreator.company.code');
+		return companyCode;
+    },
+    getConfigTable: function() {
+        var configTable = 'x_' + this.getCompanyCode() + '_mileage_config';
+        return configTable;
+    },
+    getApiEndpoint: function(recordID) {
+        var configTable = this.getConfigTable();
+        try {
+            if (recordID === undefined) {
+                var getApiEndpoint = new GlideRecord(configTable);
+                getApiEndpoint.addQuery('default',true);
+                getApiEndpoint.query();
+                if(getApiEndpoint.next()){
+                    var ApiEndpoint = getApiEndpoint.api_endpoint;
+                    return ApiEndpoint;
+                } else {
+                    return false;
+                }
+            } else {
+                var getApiEndpoint = new GlideRecord(configTable);
+                getApiEndpoint.addQuery('sys_id',recordID);
+                getApiEndpoint.query();
+                if(getApiEndpoint.next()){
+                    var ApiEndpoint = getApiEndpoint.api_endpoint;
+                    return ApiEndpoint;
+                } else {
+                    return false;
+                }
+            }
+        } catch (ex) {
+            var message = ex.getMessage();
+            gs.debug(message);
+        }
+    },
+    getDefaultCountry: function(recordID) {
+        var configTable = this.getConfigTable();
+        try {
+            if (recordID === undefined) {
+                var getDefaultCountry = new GlideRecord(configTable);
+                getDefaultCountry.addQuery('default',true);
+                getDefaultCountry.query();
+                if (getDefaultCountry.next()) {
+                    var DefaultCountry = getDefaultCountry.default_country;
+                    return DefaultCountry;                    
+                } else {
+                    return false;
+                }
+            } else {
+                var getDefaultCountry = new GlideRecord(configTable);
+                getDefaultCountry.addQuery('sys_id',recordID);
+                getDefaultCountry.query();
+                if(getDefaultCountry.next()){
+                    var DefaultCountry = getDefaultCountry.default_country;
+                    return DefaultCountry;
+                } else {
+                    return false;
+                }
+            }
+        } catch (error) {
+            var message = ex.getMessage();
+            gs.debug(message);
+        }
+    },
+    getDefaultRecordUnits: function () {
+        var configTable = this.getConfigTable();
+        try {
+            if (recordID === undefined) {
+                var getUnits = new GlideRecord(configTable);
+                getUnits.addQuery('default',true);
+                getUnits.query();
+                if (getUnits.next()) {
+                    var Units = getUnits.units;
+                    return Units;  
+                } else {
+                    return false;
+                }
+            } else {
+                var getUnits = new GlideRecord(configTable);
+                getUnits.addQuery('sys_id',recordID);
+                getUnits.query();
+                if(getUnits.next()){
+                    var Units = getUnits.units;
+                    return Units;
+                } else {
+                    return false;
+                }
+            }
+        } catch (error) {
+            var message = ex.getMessage();
+            gs.debug(message);
+        }
+    },
+    setDistance: function () {
+        var units = this.getParameter('sysparm_units');
+        var origin = this.getParameter('sysparm_origin');
+        var destination = this.getParameter('sysparm_destination');
+        var googleapikey = this.getParameter('sysparm_googleapikey');
+        var avoidferries = this.getParameter('sysparm_avoidferries');
+
+        var restCall = new sn_ws.RESTMessageV2('Google Maps Distance', 'Get');
+        restCall.setStringParameter("key",googleapikey);
+        restCall.setStringParameter("units",units);
+        restCall.setStringParameter("origins",origin);
+        restCall.setStringParameter("destinations",destination);
+        restCall.setStringParameter("avoid",avoidferries);
+    
+        var response = restCall.execute();
+        var responseBody = response.getBody();
+        
+        var jsObject = JSON.parse(responseBody);
+        var distance = (jsObject.rows[0].elements[0].distance.text);
+        //return distance + ' param: ' + units + ' origin: ' + origin + ' destination: ' + destination + ' googleapikey:  ' + googleapikey + ' avoidferries: ' + avoidferries;
+        return distance;
+
+    },
+    getDefaultOrigin: function() {
+        var config_used = this.getParameter('sysparm_config_used');
+        var configTable = this.getConfigTable();
+        var getDefaultOrigin = new GlideRecord(configTable);
+        getDefaultOrigin.addQuery('sys_id',config_used);
+        getDefaultOrigin.query();
+        if(getDefaultOrigin.next()) {
+            var cmnLocation = getDefaultOrigin.default_origin;
+            //return cmnLocation;
+            var getLocation = new GlideRecord('cmn_location');
+            getLocation.addQuery('sys_id',cmnLocation);
+            getLocation.query();
+            if(getLocation.next()) {
+                return getLocation.name + ';' + getLocation.street + ';' + getLocation.city + ';' + getLocation.zip + ';' + getLocation.country;
+            }
+        } else {
+            return null;
+        }
+    },
+	type: 'helperFunctions'
+	
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>devo.mj</sys_created_by>
+        <sys_created_on>2019-02-05 11:28:20</sys_created_on>
+        <sys_id>7c9b567fdb93230067fbe1bb4b96195c</sys_id>
+        <sys_mod_count>94</sys_mod_count>
+        <sys_name>helperFunctions</sys_name>
+        <sys_package display_value="Mileage" source="x_276057_mileage">0922d62edb13230067fbe1bb4b9619f1</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Mileage">0922d62edb13230067fbe1bb4b9619f1</sys_scope>
+        <sys_update_name>sys_script_include_7c9b567fdb93230067fbe1bb4b96195c</sys_update_name>
+        <sys_updated_by>devo.mj</sys_updated_by>
+        <sys_updated_on>2019-02-09 07:20:18</sys_updated_on>
+    </sys_script_include>
+</record_update>
